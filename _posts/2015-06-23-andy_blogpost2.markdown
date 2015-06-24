@@ -1,5 +1,6 @@
 ---
 title: My Second Blog Post
+author: Brain Train
 layout: post
 ---
 
