@@ -1,0 +1,7 @@
+timezone: America/Los_Angeles
+highlighter: pygments
+markdown: rdiscount
+permalink: pretty
+paginate: 5
+name: Sqor Technical Blog
+description: A Technical Blog to showcase our open source materials
