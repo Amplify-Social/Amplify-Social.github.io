@@ -1,7 +1,11 @@
 timezone: America/Los_Angeles
 highlighter: pygments
 markdown: rdiscount
-permalink: pretty
-paginate: 5
+# permalink: /blog/:title
+paginate: 2
+paginate_path: "/blog/page:num/"
 name: Sqor Technical Blog
 description: A Technical Blog to showcase our open source materials
+url: http://http://amplify-social.github.io/
+excerpt_separator: ""
+exclude: ['_site']

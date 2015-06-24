@@ -1,5 +1,6 @@
 ---
 title: My Third Blogpost, Suckaaaaahhhhh!!!!
+author: Andy Pohl
 layout: post
 ---
 
