@@ -2,7 +2,7 @@ timezone: America/Los_Angeles
 highlighter: pygments
 markdown: rdiscount
 # permalink: /blog/:title
-paginate: 2
+paginate: 4
 paginate_path: "/blog/page:num/"
 name: Sqor Technical Blog
 description: A Technical Blog to showcase our open source materials
