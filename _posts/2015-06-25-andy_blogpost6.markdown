@@ -2,7 +2,7 @@
 layout: post
 title: Andy's Latest Post, the 6th
 author: Andy Pohl
-tags: money fame power
+tags: [money,fame, power]
 ---
 
 Bacon ipsum dolor amet rump drumstick ground round bacon ham hock sausage chicken filet mignon corned beef tri-tip bresaola. Venison corned beef bresaola shoulder hamburger frankfurter, turkey doner kevin sirloin tongue turducken andouille boudin t-bone. Sausage ribeye meatloaf leberkas picanha sirloin bresaola. Pork chop t-bone drumstick porchetta andouille meatloaf ham hock. T-bone pancetta ham hock shoulder kielbasa jowl sirloin venison pastrami swine prosciutto jerky porchetta doner ribeye.
