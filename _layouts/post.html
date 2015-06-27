@@ -1,17 +1,22 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+	{% include header.html %}
+		<article>
+		    <header>
+		        <h2 class="post_title">{{ page.title }}</h2>
+		        <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
+		        <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
+		        <span class="author"><i class="icon-user"></i> {% if page.author %}<h3 class="post_author">{{page.author}}</h3>{% else %}<h3 class="site_author">{{site.author}}</h3>{% endif%}</span>
+		    </header>
+			<div class="entry">{{ content }}</div>
+			<div class="tags">Tags: {{page.tags | array_to_sentence_string}}</div>
+		</article>
+		{% include footer.html %}
+	</body>
 
-<article>
-        <header>
-            <h2>{{ page.title }}</h2>
-            <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
-            <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
-            <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
-        </header>
-
-        <div class="entry">{{ content }}</div>
-
-        
-
-</article>
+</html>

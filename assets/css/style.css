@@ -1,0 +1,46 @@
+.header {
+	background-color: #26a69a;
+	height: 70px;
+	width: 100%;
+	border-bottom: 5px solid black;
+}
+.footer {
+	background-color: #26a69a;
+	height: 70px;
+	width: 100%;
+	border-top: 5px solid black;
+}
+.main-title {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+}
+/*.index-posts {
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+}*/
+.posts {
+	margin: 0 auto;
+	width: 384px;
+}
+.index_post {
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+}
+.post_title {
+	font-family: 'Lato', sans-serif;
+}
+.post_author {
+	font-family: 'Lato', sans-serif;
+}
+.site_author {
+	font-family: 'Lato', sans-serif;
+}
+body {
+	background-color: #EEEEEE;
+}
+p {
+	color: black;
+	font-family: 'Lato', sans-serif;
+}
