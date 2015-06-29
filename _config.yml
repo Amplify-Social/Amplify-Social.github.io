@@ -8,16 +8,3 @@ description: A Technical Blog to showcase our open source materials
 url: http://http://amplify-social.github.io/
 excerpt_separator: ""
 exclude: ['_site']
-authors:
-	andy:
-		display_name: Andy Pohl
-	    email: andrew.pohl@sqor.com
-	    web: http://www.andrewdpohl.com/
-	    twitter: selltheheart
-	    github: andrewdpohl
-	brian:
-		display_name: Brain Train
-		email: brain_train@sqor.com
-		web: http://www.braintrain.com/
-		twitter: generic_brian
-		github: brian_the_brain
