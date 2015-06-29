@@ -37,6 +37,29 @@
 .site_author {
 	font-family: 'Lato', sans-serif;
 }
+.disqus {
+	margin: 0 auto;
+	width: 500px;
+}
+@media (max-width: 500px) {
+	.disqus {
+		width: 384px;
+	}
+}
+article {
+	margin: 0 auto;
+	width: 750px;
+}
+@media (max-width: 750px) {
+	article {
+		width: 500px;
+	}
+}
+@media (max-width: 500px) {
+	article {
+		width: 384px;
+	}
+}
 body {
 	background-color: #EEEEEE;
 }
