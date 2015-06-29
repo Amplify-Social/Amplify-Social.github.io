@@ -2,6 +2,7 @@
 title: My Second Blog Post
 author: Brain Train
 layout: post
+tags: [fun, money, gripe]
 ---
 
 Yes, i used a machine gun. you're only supposed to blow the bloody doors off! here. put that in your report!" and "i may have found a way out of here. when a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross. ever notice how sometimes you come across somebody you shouldn't have f**ked with? well, i'm that guy. what you have to ask yourself is, do i feel lucky. well do ya' punk? i took a viagra, got stuck in me throat, i've had a stiff neck for hours. you are as precious to me as you were to your own mother and father. i swore to them that i would protect you, and i haven't. i want to shoot the pigeons... off my roof. are you feeling lucky punk pull my finger! man's gotta know his limitations.
