@@ -31,5 +31,6 @@ As Gotham's favored son you will be ideally placed to strike at the heart of cri
 You're taller than you look in the tabIoids, Mr. Wayne.
 
 And as for the television's so-called plan, Batman has no jurisdiction.
-<img src="http://herogamesworld.com/images/batman%20games%20online.jpg">
+![BatMan](http://herogamesworld.com/images/batman%20games%20online.jpg)
+<!-- <img src="http://herogamesworld.com/images/batman%20games%20online.jpg"> -->
 
