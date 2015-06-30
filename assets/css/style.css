@@ -11,7 +11,7 @@ img {
 }
 a {
 	text-decoration: none;
-	color: #26a69a;
+	/*color: #26a69a;*/
 }
 .page-wrap {
 	height: 100%;
@@ -42,6 +42,7 @@ a {
 	background-color: #26a69a;
 	height: 70px;
 	border-top: 5px solid black;
+	text-align: center;
 }
 .main-title {
 	color: white;
@@ -63,8 +64,6 @@ a {
 }
 .post_title, .site_author, .post_author, .pagination {
 	text-align: center;
-	/*font-family: 'Lato', sans-serif;*/
-
 }
 .disqus {
 	margin: 0 auto;
@@ -113,7 +112,7 @@ p {
 }
 .archive-header a, .author_post_header {
 	text-decoration: underline;
-	color: #26a69a;
+	color: black;
 }
 @media (max-width: 1149px) {
 	.archive, .author_posts {
@@ -135,6 +134,8 @@ p {
 .tags_list {
 	font-family: 'Lato', sans-serif;
 	margin-left: 10px;
+}
+.tag_post {
 	color: #26a69a;
 }
 .tags_title {
