@@ -5,21 +5,34 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-	{% include header.html %}
-		<article>
-		    <header>
-		        <h2 class="post_title">{{ page.title }}</h2>
-		        <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
-		        <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
-		        <span class="author"><i class="icon-user"></i> {% if page.author %}<h3 class="post_author">{{page.author}}</h3>{% else %}<h3 class="site_author">{{site.author}}</h3>{% endif%}</span>
-		    </header>
-			<div class="entry">{{ content }}</div>
-			<div class="tags">Tags: {{page.tags | array_to_sentence_string}}</div>
-		</article>
-		<div class="disqus">
-			{% include disqus.html %}
+		{% include header.html %}
+		<div class="page-wrap">
+			<div class="post_container">
+				<div class="archive">
+					<h1 class="archive-header"><a href="/">ARCHIVE</a></h1>
+					{% for post in site.posts %}
+		     			{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
+		  			{% endfor %}
+				</div>
+				<article>
+				    <header>
+				        <h2 class="post_title">{{ page.title }}</h2>
+				        <h4 class="time"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></h4>
+				        <span class="author"><i class="icon-user"></i> {% if page.author %}<h3 class="post_author">Posted by:&nbsp;&nbsp;{{page.author}}</h3>{% else %}<h3 class="site_author">Posted by:&nbsp;&nbsp;{{site.author}}</h3>{% endif%}</span>
+				    </header><br/>
+					<div class="entry">{{ content }}</div><br/>
+					<div class="tags">
+						<h4 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h4>
+					</div>
+				</article>
+			</div>
+			<div class="disqus">
+				{% include disqus.html %}
+			</div>
+			<footer>
+				{% include footer.html %}
+			</footer>
 		</div>
-		{% include footer.html %}
 		{% include disqus_comment_count.js %}
 	</body>
 
