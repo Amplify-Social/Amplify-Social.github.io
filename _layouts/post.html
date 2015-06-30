@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	</head>
@@ -9,7 +10,7 @@
 		<div class="page-wrap">
 			<div class="post_container">
 				<div class="archive">
-					<h1 class="archive-header"><a href="/">ARCHIVE</a></h1>
+					<h1 class="archive-header"><a href="/">FULL ARCHIVE</a></h1>
 					{% for post in site.posts %}
 		     			{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
 		  			{% endfor %}
@@ -25,6 +26,13 @@
 						<h4 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h4>
 					</div>
 				</article>
+				<div class="author_posts">
+					<h1 class="author_post_header">RECENT POSTS BY<br/> THIS AUTHOR</h1>
+					{% assign posts = site.posts | where: "author", {{page.author}} %}
+						{% for post in posts limit:5 %}
+	  					{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a><br/>
+						{% endfor %}
+				</div>
 			</div>
 			<div class="disqus">
 				{% include disqus.html %}
