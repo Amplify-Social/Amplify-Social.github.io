@@ -6,9 +6,9 @@ At Sqor, we take pride in what we do, and how we get it done.  A huge component 
 
 As a contributor to this blog, first fork and clone this repo.  You'll then want to make sure that you follow this specific format for creating a new post:
 
->1.) In the "_posts" folder, create a new file, and name it with the following format: "YYYY-MM-DD-title.markdown".  Utilizing Jekyll's Blog Ready CMS, the content that you include in this markdown file will be automatically rendered according to a pre-set template. [Jekyll](http://jekyllrb.com/docs/home/) 
+>1.) In the "_posts" folder, create a new file, and name it with the following format: "YYYY-MM-DD-title.markdown".  Utilizing Jekyll's Blog Aware CMS, the content that you include in this markdown file will be automatically rendered according to a pre-set template. [Jekyll](http://jekyllrb.com/docs/home/) 
 
->2.) At the very top of your new markdown file, you will need to include YAML Front Matter.  This is information about the post that can be used across the rest of the websit in reference to any given post.  It also allows for a consistent way to showcase a particular authors' posts.  Front Matter needs to be entered between two sets of three (3) dashes, like so: ---. [Front Matter](http://jekyllrb.com/docs/frontmatter/)
+>2.) At the very top of your new markdown file, you will need to include YAML Front Matter.  This is information about the post that can be used across the rest of the website in reference to any given post.  It also allows for a consistent way to showcase a particular authors' posts.  Front Matter needs to be entered between two sets of three (3) dashes, like so: ---. [Front Matter](http://jekyllrb.com/docs/frontmatter/)
 
 >3.) You will need to include a layout type within your Front Matter.  At this time, the layout type that you should use is called "post". [Example Post](https://raw.githubusercontent.com/Amplify-Social/Amplify-Social.github.io/master/_posts/2015-06-23-andy_blogpost1.markdown)
 
