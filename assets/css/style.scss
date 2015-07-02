@@ -1,3 +1,6 @@
+---
+#
+---
 * {
 	margin: 0;
 }
@@ -11,7 +14,7 @@ img {
 }
 a {
 	text-decoration: none;
-	/*color: #26a69a;*/
+	color: #26a69a;
 }
 .page-wrap {
 	height: 100%;
@@ -98,6 +101,7 @@ body {
 p {
 	color: black;
 	font-family: 'Lato', sans-serif;
+	margin-bottom: 1.5em;
 }
 .post_container {
 	display: inline-block;
