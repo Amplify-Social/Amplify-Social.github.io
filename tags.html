@@ -8,13 +8,27 @@ layout: default
 	  {% endfor %}
 	{% endcapture %}
 	{% assign sortedtags = tags | split:' ' | sort %}
-
+	<div class="row">
 	{% for tag in sortedtags %}
-	  <h3 id="{{ tag }}">{{ tag }}</h3>
+	  <h4 id="{{ tag }}">{{ tag }}</h4>
 	  <ul>
 	  {% for post in site.tags[tag] %}
 	    <li><a class="tag_post" href="{{ post.url }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	  </ul><br/>
+	  	<!-- Potential Card Design for using Materialize -->
+	  	<!-- <div class="col s10 m6 l3">
+		  <div class="card blue-grey darken-1">
+		    <div class="card-content white-text">
+		      <span class="card-title"><h4 id="{{ tag }}">{{ tag }}</h4></span>
+		      	<ul>
+			      {% for post in site.tags[tag] %}
+				    <li><a class="tag_post" href="{{ post.url }}">{{ post.title }}</a></li>
+				  {% endfor %}
+				</ul>
+		    </div>
+		  </div>
+		</div> -->
 	{% endfor %}
+	</div>
 </div>
