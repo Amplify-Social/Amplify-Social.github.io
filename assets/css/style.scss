@@ -8,9 +8,12 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', sans-serif;
+	margin-top: -12px;
 }
 img {
-	max-width: 750px;
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
 }
 a {
 	text-decoration: none;
@@ -20,6 +23,7 @@ a {
 	height: 100%;
 	width: 100%;
 	margin:0 0 -70px 0;
+	min-height: 700px;
 }
 .header {
 	background-color: #26a69a;
@@ -61,6 +65,7 @@ a {
 }
 .index_post {
 	text-decoration: none;
+	color: #26a69a;
 }
 .index-posts {
 	margin-top: 15px;
@@ -72,29 +77,29 @@ a {
 	margin: 0 auto;
 	width: 500px;
 }
-@media (max-width: 500px) {
+/*@media (max-width: 500px) {
 	.disqus {
 		width: 384px;
 	}
-}
+}*/
 article {
-	margin: 0 10px;
-	width: 750px;
-	max-width: 750px;
-	float: left;
-	font-family: 'Lato', sans-serif;
+	margin: 8px !important;
+	/*width: 750px;
+	max-width: 750px;*/
+	/*float: left;*/
+	/*font-family: 'Lato', sans-serif;*/
 	min-height: 500px;
 }
-@media (max-width: 750px) {
-	article, img {
+/*@media (max-width: 750px) {
+	img {
 		width: 500px;
 	}
 }
 @media (max-width: 500px) {
-	article, img {
+	img {
 		width: 384px;
 	}
-}
+}*/
 body {
 	background-color: #EEEEEE;
 }
@@ -109,22 +114,22 @@ p {
 	min-height: 300px;
 }
 .archive, .author_posts {
-	margin-top: 20px;
-	width: 384px;
+	/*margin-top: 20px;*/
+	margin: 8px !important;
+	/*width: 384px;*/
 	float: right;
 	font-family: 'Lato', sans-serif;
 }
 .archive-header a, .author_post_header {
-	text-decoration: underline;
-	color: black;
+	color: white !important;
 }
-@media (max-width: 1149px) {
-	.archive, .author_posts {
+@media (max-width: 1166px) {
+	/*.archive, .author_posts {
 		display: none;
-	}
+	}*/
 	article, img {
-		float: none;
-		margin: 0 auto;
+		float: none !important;
+		margin: 8px auto !important;
 	}
 }
 @media (max-width: 473px) {
@@ -137,7 +142,8 @@ p {
 }
 .tags_list {
 	font-family: 'Lato', sans-serif;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
+	min-height: 625px;
 }
 .tag_post {
 	color: #26a69a;

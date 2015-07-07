@@ -5,38 +5,73 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<!-- Compiled and minified CSS -->
-  		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"> -->
-		<!-- Compiled and minified JavaScript -->
-  		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script> -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
           
 	</head>
 	<body>
 		{% include header.html %}
 		<div class="page-wrap">
 			<div class="post_container">
-				<div class="archive">
-					<h1 class="archive-header"><a href="/">FULL ARCHIVE</a></h1>
-					{% for post in site.posts %}
-		     			{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
-		  			{% endfor %}
-				</div>
-				<article>
-				    <header>
-				        <h2 class="post_title">{{ page.title }}</h2>
-				        <h4 class="time"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></h4>
-				        <span class="author"><i class="icon-user"></i> {% if page.author %}<h3 class="post_author">Posted by:&nbsp;&nbsp;{{page.author}}</h3>{% else %}<h3 class="site_author">Posted by:&nbsp;&nbsp;{{site.author}}</h3>{% endif%}</span>
-				    </header><br/>
-					<div class="entry">{{ content }}</div><br/>
-					<div class="tags">
-						<h4 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h4>
+				<div class="row">
+					<div class="col l8 m12 s12">
+						<article class="card">
+						    <header class="teal lighten-1 z-depth-2 white-text">
+						        <h2 class="post_title">{{ page.title }}</h2>
+						        <h4 class="time"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></h4>
+						        <span class="author"><i class="icon-user"></i> {% if page.author %}<h4 class="post_author">Posted by:&nbsp;&nbsp;{{page.author}}</h4>{% else %}<h4 class="site_author">Posted by:&nbsp;&nbsp;{{site.author}}</h4>{% endif%}</span>
+						    </header><br/>
+							<div class="entry">{{ content }}</div><br/>
+							<div class="tags">
+								<h5 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h5>
+							</div>
+						</article>
 					</div>
-				</article>
-				<div class="author_posts">
-					<h1 class="author_post_header">RECENT POSTS BY<br/> THIS AUTHOR</h1>
-					{% assign posts = site.posts | where: "author", {{page.author}} %}
-						{% for post in posts limit:5 %}
-	  					{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a><br/>
-						{% endfor %}
+					<div class="col l4 m12 s12">
+						<div class="card">
+							<ul class="collapsible popout" data-collapsible="accordion">
+							    <li>
+							      <div class="collapsible-header teal lighten-1 white-text waves-effect waves-light"><h5>Recent Posts By This Author</h5></div>
+							      <div class="collapsible-body">
+										<!-- <h3 class="author_post_header teal lighten-1 z-depth-2 white-text">RECENT POSTS BY<br/> THIS AUTHOR</h3> -->
+										{% assign posts = site.posts | where: "author", {{page.author}} %}
+										{% for post in posts limit:5 %}
+			  								<h5>{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a></h5><br/>
+										{% endfor %}
+							      </div>
+							    </li>
+							    <li>
+							      <div class="collapsible-header teal lighten-1 white-text waves-effect waves-light"><h5>Full Archive</h5></div>
+							      <div class="collapsible-body">
+										<!-- <h3 class="archive-header teal lighten-1 z-depth-2 white-text"><a href="/">FULL ARCHIVE</a></h3> -->
+										{% for post in site.posts %}
+				     						<h5>{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a></h5>
+				  						{% endfor %}
+							      </div>
+							    </li>
+							    <li>
+							      <div class="collapsible-header">Third</div>
+							      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+							    </li>
+						  	</ul>
+					  	</div>
+				  	</div>
+					<!-- <div class="col l3 m4 s12">
+						<div class="author_posts card">
+							<h3 class="author_post_header teal lighten-1 z-depth-2 white-text">RECENT POSTS BY<br/> THIS AUTHOR</h3>
+							{% assign posts = site.posts | where: "author", {{page.author}} %}
+								{% for post in posts limit:5 %}
+			  					{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a><br/>
+								{% endfor %}
+						</div>
+					</div>
+					<div class="col l3 m4 s12">
+						<div class="archive card">
+							<h3 class="archive-header teal lighten-1 z-depth-2 white-text"><a href="/">FULL ARCHIVE</a></h3>
+							{% for post in site.posts %}
+				     			{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
+				  			{% endfor %}
+						</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="disqus">
@@ -46,6 +81,17 @@
 				{% include footer.html %}
 			</footer>
 		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      	// <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+		<!-- Compiled and minified JavaScript -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  		<script type="text/javascript">
+			$(document).ready(function(){
+    			$('.collapsible').collapsible({
+      				accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    			});
+  			});
+		</script>
 	</body>
 
 </html>
