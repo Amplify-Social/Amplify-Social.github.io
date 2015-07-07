@@ -2,10 +2,28 @@
 layout: default
 title: HOME
 ---
+<!-- <div class="index-posts">
+	<div class="posts">
+	{% for post in site.posts %}
+	    {{ post.date | date: '%B %d, %Y' }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
+	{% endfor %}
+	</div>
+</div> -->
+
 <div class="index-posts">
-  <div class="posts">
-  {% for post in site.posts %}
-     {{ post.date | date: '%B %d, %Y' }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
-  {% endfor %}
-  </div>
+	<div class="posts">
+	{% for post in site.posts %}
+		<a class="index_post" href="{{ post.url }}"><div class="col s10 m6 l3">
+			<div class="card">
+				<div class="teal lighten-2 z-depth-1">
+		    		<h5 class="center-align white-text">{{post.title}}</h5>
+		    		<h6 class="center-align white-text">{{ post.date | date: '%B %d, %Y' }}</h6>
+	    		</div>
+		    	<div class="post_excerpt black-text">
+		    		<span>&nbsp;&nbsp;&nbsp;{{ post.content | strip_html | truncatewords: 50 }}</span>
+	    		</div>
+	    	</div>
+    	</div></a>
+	{% endfor %}
+	</div>
 </div>
