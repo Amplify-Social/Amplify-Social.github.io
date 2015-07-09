@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<!-- Compiled and minified CSS -->
-  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-          
-	</head>
+		{% include head_links.html %}
+    </head>
 	<body>
 		{% include header.html %}
 		<div class="page-wrap">
@@ -18,80 +13,60 @@
 						    <header class="teal lighten-1 z-depth-2 white-text">
 						        <h2 class="post_title">{{ page.title }}</h2>
 						        <h4 class="time"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></h4>
-						        <span class="author"><i class="icon-user"></i> {% if page.author %}<h4 class="post_author">Posted by:&nbsp;&nbsp;{{page.author}}</h4>{% else %}<h4 class="site_author">Posted by:&nbsp;&nbsp;{{site.author}}</h4>{% endif%}</span>
+						        <div>
+						        	{% if page.gravatar %}<img class="gravatar" src="http://www.gravatar.com/avatar/{{page.gravatar}}" />{% else %}<img class="gravatar" src="/assets/images/sqor_logo.png">{% endif %}
+						        </div>
+						        <div>
+						        	{% if page.author %}<h4 class="post_author">Posted by:&nbsp;&nbsp;{{page.author}}</h4>{% else %}<h4 class="site_author">Posted by:&nbsp;&nbsp;{{site.author}}</h4>{% endif%}
+						        </div>
 						    </header><br/>
-							<div class="entry">{{ content }}</div><br/>
+							<div class="entry">{{ content }}</div>
 							<div class="tags">
-								<h5 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h5>
-							</div>
+								<h6 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h6>
+							</div><br/>
+							<ul class="social-plugins">
+							  	<li><script type="text/javascript" src="//www.redditstatic.com/button/button3.js"></script></li>
+							  	<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="Sqor">Tweet</a></li>
+							  	<li><a href="http://news.ycombinator.com/submitlink?u=http://amplify-social.github.com{{ page.url }}&t={{ page.title }}"><img src="/assets/images/y-comb-icon.png"></a></li>
+						  	</ul>
 						</article>
 					</div>
 					<div class="col l4 m12 s12">
 						<div class="card">
 							<ul class="collapsible popout" data-collapsible="expandable">
 							    <li>
-							      <div class="collapsible-header teal lighten-1 white-text waves-effect waves-light"><h5 class="center-align">Recent Posts By This Author</h5></div>
+							      <div class="card collapsible-header teal lighten-1 white-text waves-effect waves-light z-depth-2"><h5 class="center-align">Recent Posts By This Author</h5></div>
 							      <div class="collapsible-body">
-										<!-- <h3 class="author_post_header teal lighten-1 z-depth-2 white-text">RECENT POSTS BY<br/> THIS AUTHOR</h3> -->
 										{% assign posts = site.posts | where: "author", {{page.author}} %}
 										{% for post in posts limit:5 %}
-			  								<h5>{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a></h5><br/>
+			  								<h5>{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a></h5>
 										{% endfor %}
 							      </div>
 							    </li>
 							    <li>
-							      <div class="collapsible-header teal lighten-1 white-text waves-effect waves-light"><h5 class="center-align">Full Archive</h5></div>
+							      <div class="card collapsible-header teal lighten-1 white-text waves-effect waves-light z-depth-2"><h5 class="center-align">Full Archive</h5></div>
 							      <div class="collapsible-body">
-										<!-- <h3 class="archive-header teal lighten-1 z-depth-2 white-text"><a href="/">FULL ARCHIVE</a></h3> -->
 										{% for post in site.posts %}
 				     						<h5>{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a></h5>
 				  						{% endfor %}
 							      </div>
 							    </li>
-							    <!-- <li>
-							      <div class="collapsible-header">Third</div>
-							      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-							    </li> -->
 						  	</ul>
 					  	</div>
 				  	</div>
-					<!-- <div class="col l3 m4 s12">
-						<div class="author_posts card">
-							<h3 class="author_post_header teal lighten-1 z-depth-2 white-text">RECENT POSTS BY<br/> THIS AUTHOR</h3>
-							{% assign posts = site.posts | where: "author", {{page.author}} %}
-								{% for post in posts limit:5 %}
-			  					{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a><br/>
-								{% endfor %}
-						</div>
-					</div>
-					<div class="col l3 m4 s12">
-						<div class="archive card">
-							<h3 class="archive-header teal lighten-1 z-depth-2 white-text"><a href="/">FULL ARCHIVE</a></h3>
-							{% for post in site.posts %}
-				     			{{ post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{ post.url }}">{{post.title}}</a><br />
-				  			{% endfor %}
-						</div>
-					</div> -->
+				  	<div class="col l4 m12 s12">
+				  		<div class="card disqus">
+				  		{% include disqus.html %}
+				  		</div>
+				  	</div>
 				</div>
 			</div>
-			<div class="disqus">
+			<!-- <div class="disqus">
 				{% include disqus.html %}
-			</div>
-			<!-- <footer>
-				{% include footer.html %}
-			</footer> -->
+			</div> -->
+			<p class="copy">&copy; <time>{{ site.time | date: '%Y' }}</time> Sqor, Inc.  Powered by <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://materializecss.com">Materialize</a></p>
 		</div>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-		<!-- Compiled and minified JavaScript -->
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-  		<script type="text/javascript">
-			$(document).ready(function(){
-    			$('.collapsible').collapsible({
-      				accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    			});
-  			});
-		</script>
+	{% include scripts.html %}
 	</body>
 
 </html>
