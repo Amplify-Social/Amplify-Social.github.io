@@ -24,7 +24,7 @@
 							<div class="tags">
 								<h6 class="tags_title">Tags: {{page.tags | array_to_sentence_string}}</h6>
 							</div><br/>
-							<ul class="social-plugins">
+							<ul class="social-plugins center-align">
 							  	<li><script type="text/javascript" src="//www.redditstatic.com/button/button3.js"></script></li>
 							  	<li><a href="https://twitter.com/share" class="twitter-share-button" data-via="Sqor">Tweet</a></li>
 							  	<li><a href="http://news.ycombinator.com/submitlink?u=http://amplify-social.github.com{{ page.url }}&t={{ page.title }}"><img src="/assets/images/y-comb-icon.png"></a></li>
@@ -61,9 +61,6 @@
 				  	</div>
 				</div>
 			</div>
-			<!-- <div class="disqus">
-				{% include disqus.html %}
-			</div> -->
 			<p class="copy">&copy; <time>{{ site.time | date: '%Y' }}</time> Sqor, Inc.  Powered by <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://materializecss.com">Materialize</a></p>
 		</div>
 	{% include scripts.html %}
