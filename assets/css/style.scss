@@ -75,11 +75,13 @@ nav {
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
 }
-.posts {
+/*.posts {
 	margin: 0 auto;
 	width: 384px;
 	height: 100%;
-}
+	display: inline-block;
+	float: left;
+}*/
 .index_post {
 	text-decoration: none;
 	color: #26a69a;
@@ -102,6 +104,7 @@ nav {
 article {
 	margin: 8px !important;
 	min-height: 500px;
+	overflow: inherit !important;
 }
 body {
 	background-color: #EEEEEE;
@@ -123,6 +126,9 @@ p {
 }
 .archive-header a, .author_post_header {
 	color: white !important;
+}
+.archive-card {
+	margin: 19px 0 10px 0;
 }
 @media (max-width: 1166px) {
 	article, img {

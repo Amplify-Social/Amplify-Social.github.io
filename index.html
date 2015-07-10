@@ -4,9 +4,11 @@ title: HOME
 ---
 
 <div class="index-posts">
-	<div class="posts">
+	<!-- <div class="posts"> -->
+	<div class="row">
 	{% for post in site.posts %}
-		<a class="index_post" href="{{ post.url }}"><div class="col s10 m6 l3">
+	<ul>
+		<li><a class="index_post" href="{{ post.url }}"><div class="col s12 m6 l6">
 			<div class="card">
 				<div class="teal lighten-2 z-depth-1">
 		    		<h5 class="center-align white-text">{{post.title}}</h5>
@@ -16,7 +18,9 @@ title: HOME
 		    		<span>&nbsp;&nbsp;&nbsp;{{ post.content | strip_html | truncatewords: 50 }}</span>
 	    		</div>
 	    	</div>
-    	</div></a>
+    	</div></a></li>
+	</ul>
 	{% endfor %}
 	</div>
+	<!-- </div> -->
 </div>
