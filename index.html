@@ -10,8 +10,9 @@ title: HOME
 		<li><a class="index_post" href="{{ post.url }}"><div class="col s12 m6 l6">
 			<div class="card index-card">
 				<div class="teal lighten-2 z-depth-1">
-		    		<h5 class="center-align white-text">{{post.title}}</h5>
+		    		<h5 class="center-align white-text">{{ post.title }}</h5>
 		    		<h6 class="center-align white-text">{{ post.date | date: '%B %d, %Y' }}</h6>
+		    		<h6 class="center-align white-text">Posted by: {{ post.author }}</h6>
 	    		</div>
 		    	<div class="post_excerpt black-text">
 		    		<p class="entry">{{ post.content | strip_html | truncatewords: 50 }}</p>
