@@ -114,6 +114,13 @@ p {
 .archive-card {
 	margin: 19px 0 10px 0;
 }
+/*.sidebar {
+	position: fixed;
+	top: 60px;
+	right: 0;
+	float: right; 
+	max-height: 500px;
+}*/
 @media (max-width: 1166px) {
 	article, img {
 		float: none !important;
@@ -153,4 +160,7 @@ p {
 	width: 100px;
 	display: block;
   	margin: 0 auto;
+}
+.disqus {
+	padding: 5px;
 }

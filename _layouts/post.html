@@ -35,10 +35,10 @@
 						<div class="card">
 							<ul class="collapsible popout" data-collapsible="expandable">
 							    <li>
-							      <div class="card collapsible-header teal lighten-1 white-text waves-effect waves-light z-depth-2"><h5 class="center-align">Recent Posts By This Author</h5></div>
+							      <div class="card collapsible-header teal lighten-1 white-text waves-effect waves-light z-depth-2"><h5 class="center-align">Posts By This Author</h5></div>
 							      <div class="collapsible-body">
 										{% assign posts = site.posts | where: "author", {{page.author}} %}
-										{% for post in posts limit:5 %}
+										{% for post in posts limit:10 %}
 			  								<h5>{{post.date | date_to_string }}&nbsp;&nbsp;&nbsp;<a class="index_post" href="{{post.url}}">{{ post.title }}</a></h5>
 										{% endfor %}
 							      </div>
