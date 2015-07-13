@@ -18,5 +18,9 @@ As a contributor to this blog, first clone this repo.  You'll then want to make 
 
 >6.) If you'd like to include links, photos, pdfs, etc in your markdown file, here is a great reference tool for including such elements.  [MarkDown](https://guides.github.com/features/mastering-markdown/)
 
+>7.) If you'd like to include a gravatar image, you'll need to have a gravatar account.  Once that account is established and you've linked the photo of your choice, include the gravatar hash with the YAML Front Matter at the top of your post.  If you don't want to use a gravatar photo, there is a default Sqor Sports image that will take it's place in the header of your post. [Gravatar](https://en.gravatar.com/)
+
+>8.) Disqus has been included in all posts as a means of commenting.  Setting up an account with Disqus is very easy and will allow you to add comments anywhere Disqus is used. [Disqus](https://disqus.com/)
+
 After you have set up your markdown file the way that you want, just commit your changes and push and merge with master branch.  
 
