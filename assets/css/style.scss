@@ -1,9 +1,6 @@
 ---
 #
 ---
-* {
-	margin: 0;
-}
 html, body {
 	height: 100%;
 	width: 100%;
@@ -52,7 +49,7 @@ nav {
 .nav_menu li {
 	display: inline;
 	list-style-type: none;
-	padding: 5px;	
+	padding: 5px;
 }
 .copy {
 	text-align: center;
@@ -67,11 +64,13 @@ nav {
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Lato', sans-serif;
 }
 .index_post {
 	text-decoration: none;
 	color: #26a69a;
+}
+.index-card, .tag-card {
+	min-height: 125px;
 }
 .index-card, .tag-card {
 	overflow: inherit !important;
@@ -79,7 +78,7 @@ nav {
 .index-posts {
 	margin-top: 15px;
 }
-.post_title, .site_author, .post_author, .pagination {
+.post_title, .site_author, .post_author {
 	text-align: center;
 }
 .entry {
@@ -95,7 +94,6 @@ body {
 }
 p {
 	color: black;
-	font-family: 'Lato', sans-serif;
 	margin-bottom: 1.5em;
 }
 .post_container {
@@ -105,8 +103,6 @@ p {
 }
 .archive, .author_posts {
 	margin: 8px !important;
-	float: right;
-	font-family: 'Lato', sans-serif;
 }
 .archive-header a, .author_post_header {
 	color: white !important;
@@ -141,7 +137,6 @@ p {
 	padding: 10px;
 }
 .tags_list {
-	font-family: 'Lato', sans-serif;
 	min-height: 625px;
 }
 .tag_post {
@@ -151,7 +146,7 @@ p {
 	text-transform: uppercase;
 	text-align: center;
 }
-.time {
+.time, .card-title {
 	text-align: center;
 }
 .gravatar {
@@ -163,4 +158,9 @@ p {
 }
 .disqus {
 	padding: 5px;
+}
+@media (max-width: 601px) {
+	.side-nav i {
+		margin-top: 18px;
+	}
 }
