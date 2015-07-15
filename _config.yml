@@ -1,4 +1,4 @@
-timezone: America/Los_Angeles
+ timezone: America/Los_Angeles
 highlighter: pygments
 permalink: "/:title"
 name: Sqor Sports Blog
